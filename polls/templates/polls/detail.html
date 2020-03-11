@@ -1,5 +1,8 @@
 <h1>{{ questions.question_text }}</h1>
-
+<div>
+    <a href="{% url 'polls:index' %}">Questions list</a>
+</div>
+&nbsp;&nbsp;
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'polls:vote' questions.id %}" method="post">
