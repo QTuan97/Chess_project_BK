@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', v.register, name ='register'),
     path('polls/', include('polls.urls')),
+    path('chessboard/', include('chessboard.urls')),
 ]
