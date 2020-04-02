@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.views import generic
+from django.contrib.auth import authenticate, login
 from .forms import RegistForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # def register(respone):
@@ -15,7 +17,6 @@ from .forms import RegistForm
 #
 #     return render(respone, "register/reg.html", {"form":form})
 #
-
 
 class CreateUser(generic.CreateView):
     template_name = 'register/reg.html'
@@ -36,6 +37,10 @@ class CreateUser(generic.CreateView):
             return redirect("/")
         else:
             return render(request,"register/reg.html", {"form": form})
+
+
+
+
 
 
 

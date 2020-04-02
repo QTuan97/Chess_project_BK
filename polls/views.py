@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.views import generic
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 from .models import Questions,Choices
 # Create your views here.

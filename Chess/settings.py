@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'register.apps.RegisterConfig',
     'chessboard.apps.ChessboardConfig',
+    'login.apps.LoginConfig'
 ]
 
 MIDDLEWARE = [
